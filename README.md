@@ -5,5 +5,5 @@ List of basic git commands
 
 ## Add Local Connection
 
-It is recommended that you first create the repository in GitHub before you start adding files and code in the local folder.
-To do this, first create 
+It is recommended that you first create the repository in GitHub before you start adding files and code in the local folder. To do this:<br>
+1. Create a [new repository](https://github.com/new) on GitHub
