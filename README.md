@@ -6,6 +6,7 @@ List of basic git commands
 ## Add Local Connection
 
 It is recommended that you first create the repository in GitHub before you start adding files and code in the local folder. To do this:<br>
-1. Create a [new repository](https://github.com/new){:target="_blank"} on GitHub.
+1. Create a [new repository](https://github.com/new) on GitHub
+2. Open the cmd and use the command '''cd [path]'''
 
-<a href="https://maps.google.com" target="_blank">external link</a>
+
