@@ -11,6 +11,9 @@ It is recommended that you first create the repository in GitHub before you star
 &nbsp;&nbsp;&nbsp;&nbsp;*Note that the final destination of the repository would be ```path\repo_name```*
 3. Now access the repo folder by ```cd repo_name```
 4. Use ```git clone repo_link```. You can find the repo link on your repository, under code, under HTTPS
+
+More info on [git clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
+<br>
 <br>
 
 ## Git Push
