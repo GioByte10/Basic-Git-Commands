@@ -20,7 +20,7 @@ The git push command allows us to upload code from a local folder to the reposit
 1. Open the cmd and use the command ```cd path``` where path is the location of the local folder.
 2. Add all files  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```git add -A```
 3. Add a commit   &nbsp;&nbsp;&nbsp;&nbsp;```git commit -m "comment"```
-4. Push           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```git push``` or ```git push origin master```
+4. Push           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;```git push```
 <br>
 
 ## Git Pull
