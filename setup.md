@@ -21,9 +21,19 @@ Here we have multiple settings we can play with, but the ones we'll be changing 
 
 
 ## Networks
+Scan for WiFi networks
+```
+nmcli d wifi list ifname wlan0
+```
+
 In order to connect the Pi to a WiFi network we need to modify the `wpa_supplicant.conf` file. We can open it on nano using:
 ```
 sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
+```
+
+Then restart the DHCP client
+```
+sudo dhcleint wlan0
 ```
 
 Check network configuration
@@ -46,3 +56,20 @@ Check disk usage
 ```
 df -h
 ```
+
+## Basic Linux Commands
+
+`sudo command` run `command` with admin priviliges
+`ls` list the contents of the directory<br>
+`cd directory` navigate to `directory`<br>
+`~` home directory<br>
+`\` root directory<br>
+`mkdir directory` make `directory`<br>
+`rmdir directory` delete empty `directory`<br>
+`rm -r directory` delete non-empty `directory`<br>
+`rm file` delete `file`<br>
+
+
+## Troubleshooting
+P: I connected through `sudo raspi-config` and can't seem to find the network information in the supplicant file.<br>
+A: The network was added under `/etc/NetworkManager/system-connections`. Delete the file and add the information in the `wpa_supplicant.conf`
