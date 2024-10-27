@@ -17,7 +17,7 @@ sudo apt update
 ```
 Once the Pi has the updated package index, we can ahead and install their latest version
 ```
-sudo apt upgrade
+sudo apt full-upgrade
 ```
 
 ## Setup WiFi
@@ -48,7 +48,7 @@ Scan for WiFi networks
 sudo iwlist wlan0 scan | grep "ESSID"
 ```
 
-In order to connect the Pi to a WiFi network we need to modify the `wpa_supplicant.conf` file. We can open it on nano using:
+In order to connect the Pi to a WiFi network we need to modify the `wpa_supplicant.conf` file. We can open it on nano using
 ```
 sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
 ```
