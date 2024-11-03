@@ -11,7 +11,7 @@ We can configure the Pi through the `Raspberry Pi Software Configuration Tool`, 
 sudo raspi-config
 ```
 Here we have multiple settings we can play with, but the ones we'll be changing are the following:
-- System Options/Wireless LAN &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; → connect to a personal network (hotspot)
+- System Options/Wireless LAN &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; → connect to a personal network (home network/hotspot)
 - System Options/Boot / Auto Login &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; → console autologin
 - Interface Options/ SSH &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; → enable
 - Localisation Options &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; → timezone, keyboard, etc
