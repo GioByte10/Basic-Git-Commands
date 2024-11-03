@@ -1,9 +1,9 @@
 ## OS Installation
 We will be using the Raspberry Pi OS Lite
-1) Download the image [here](https://www.raspberrypi.com/software/operating-systems/)
+1) Download the image OS [here](https://www.raspberrypi.com/software/operating-systems/)
 2) After downloading, extract the file
 3) Using BalenaEtcher, burn the image into the micro SD card
-4) Inser the micro SD in the Pi and boot it up
+4) Insert the micro SD in the Pi and boot it up
 
 ## Pi configuration
 We can configure the Pi through the `Raspberry Pi Software Configuration Tool`, which we can access through
@@ -113,7 +113,7 @@ We can further check if the Pi is connected to internet by pinging a website, e.
 ping www.google.com
 ```
 <br><br>
-If you were successful, stop here, else follow the these extra steps. Go into the wpa_supplicant service
+If you were successful, stop here, else follow these extra steps. Go into the wpa_supplicant service
 ```
 sudo nano /etc/systemd/system/wpa_supplicant@wlan0.service
 ```
@@ -143,6 +143,8 @@ Check the process' status
 ```
 sudo systemctl status wpa_supplicant@wlan0.service
 ```
+
+Check connection
 
 ## SSH
 The [Secure Shell](https://en.wikipedia.org/wiki/Secure_Shell) protocol allows us to remotely access the Pi through the terminal. This way we can use our laptop to communicate with the Pi without the need for an external screen or keyboard. By default a Pi has a dynamic IP address, that means that the DHCP server assigns a temporary IP to the Pi. In this case the one assigning the IPs could be the router used at home and on campus. Given that we have no control over the dynamic IP, usually you would want something like a static IP, but in this case we will be using [Multicast DNS](en.wikipedia.org/wiki/Multicast_DNS) (mDNS) through Avahi since it is a [zero-configuration](en.wikipedia.org/wiki/Zero-configuration_networking) service.
@@ -186,7 +188,7 @@ ssh  username@hostname.local
 ```
 
 ## Miscellaneous
-Get the weather just for fun
+Check the weather just for fun
 ```
 curl wttr.in/location
 ```
