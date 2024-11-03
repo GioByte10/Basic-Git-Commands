@@ -138,6 +138,10 @@ sudo systemctl status wpa_supplicant@wlan0.service
 ```
 
 ## Miscellaneous
+Get the weather just for fun
+```
+curl wttr.in/location
+```
 Check disk usage
 ```
 df -h
