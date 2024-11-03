@@ -1,3 +1,10 @@
+## OS Installation
+We will be using the Raspberry Pi OS Lite
+1) Download the image [here](https://www.raspberrypi.com/software/operating-systems/)
+2) After downloading, extract the file
+3) Using BalenaEtcher, burn the image into the micro SD card
+4) Inser the micro SD in the Pi and boot it up
+
 ## Pi configuration
 We can configure the Pi through the `Raspberry Pi Software Configuration Tool`, which we can access through
 ```
@@ -137,6 +144,47 @@ Check the process' status
 sudo systemctl status wpa_supplicant@wlan0.service
 ```
 
+## SSH
+The [Secure Shell](https://en.wikipedia.org/wiki/Secure_Shell) protocol allows us to remotely access the Pi through the terminal. This way we can use our laptop to communicate with the Pi without the need for an external screen or keyboard. By default a Pi has a dynamic IP address, that means that the DHCP server assigns a temporary IP to the Pi. In this case the one assigning the IPs could be the router used at home and on campus. Given that we have no control over the dynamic IP, usually you would want something like a static IP, but in this case we will be using [Multicast DNS](en.wikipedia.org/wiki/Multicast_DNS) (mDNS) through Avahi since it is a [zero-configuration](en.wikipedia.org/wiki/Zero-configuration_networking) service.
+
+If we were to use SSH the "standard" way, we would connect by
+```
+ssh username@PI_IP_ADDRESS
+```
+e.g.,
+```
+ssh triton-baja@192.186.85.21
+```
+However, since the IP is constantly changing, we would have to obtain the Pi's IP every single time. On the other hand, mDNS works by resolving hostnames to IP addresses, so we would connect by
+```
+ssh username@hostname.local
+```
+e.g.,
+```
+ssh triton-baja@raspberrrypi.local
+```
+Before we begin, we need to make sure that every raspberrypi has its own unique hostname. The default hostname is `raspberrypi`. You can change this through `sudo raspi-config` under System Options/Hostname and rebooting.
+
+Let's install Avahi
+```
+sudo apt install avahi-daemon
+```
+
+Check it is enabled and running
+```
+sudo systemctl status avahi-daemon
+```
+
+Now, on your laptop, try pinging the Pi
+```
+ping hostname.local
+```
+
+Try connecting
+```
+ssh  username@hostname.local
+```
+
 ## Miscellaneous
 Get the weather just for fun
 ```
@@ -148,7 +196,7 @@ df -h
 ```
 
 # Apendix
-Other useful commands
+Useful commands
 
 ## WiFi
 Enable WiFi
